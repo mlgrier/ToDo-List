@@ -44,20 +44,68 @@
             </objects>
             <point key="canvasLocation" x="287.19999999999999" y="-86.806596701649184"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="8OF-pc-eVy">
             <objects>
-                <viewController id="l2T-Oa-Lfs" sceneMemberID="viewController">
+                <viewController id="l2T-Oa-Lfs" customClass="AddToDoViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iot-0h-Kfh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aW-uF-58Z">
+                                <rect key="frame" x="168.5" y="84" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0P-sV-Av0">
+                                <rect key="frame" x="20" y="125" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayd-Mr-acp">
+                                <rect key="frame" x="147.5" y="204" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-Cg-QOa">
+                                <rect key="frame" x="163" y="245" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmx-Tk-xoD">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="l2T-Oa-Lfs" eventType="touchUpInside" id="zBx-ni-vgs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q7v-Cg-QOa" firstAttribute="centerX" secondItem="iot-0h-Kfh" secondAttribute="centerX" id="7XW-na-san"/>
+                            <constraint firstItem="Q7v-Cg-QOa" firstAttribute="top" secondItem="Ayd-Mr-acp" secondAttribute="bottom" constant="20" id="A0M-uc-0et"/>
+                            <constraint firstItem="A0P-sV-Av0" firstAttribute="top" secondItem="7aW-uF-58Z" secondAttribute="bottom" constant="20" id="CbU-9F-VAq"/>
+                            <constraint firstItem="Ayd-Mr-acp" firstAttribute="top" secondItem="A0P-sV-Av0" secondAttribute="bottom" constant="49" id="FfW-xy-zik"/>
+                            <constraint firstItem="7aW-uF-58Z" firstAttribute="centerX" secondItem="iot-0h-Kfh" secondAttribute="centerX" id="NW1-iQ-C3K"/>
+                            <constraint firstItem="Tmx-Tk-xoD" firstAttribute="top" secondItem="Q7v-Cg-QOa" secondAttribute="bottom" constant="42" id="TrZ-hY-h8A"/>
+                            <constraint firstItem="6Dc-T0-5LS" firstAttribute="trailing" secondItem="A0P-sV-Av0" secondAttribute="trailing" constant="20" id="a9K-gV-40O"/>
+                            <constraint firstItem="A0P-sV-Av0" firstAttribute="centerX" secondItem="iot-0h-Kfh" secondAttribute="centerX" id="aGV-ow-Gfg"/>
+                            <constraint firstItem="7aW-uF-58Z" firstAttribute="top" secondItem="6Dc-T0-5LS" secondAttribute="top" constant="20" id="cra-Fd-H7x"/>
+                            <constraint firstItem="A0P-sV-Av0" firstAttribute="leading" secondItem="6Dc-T0-5LS" secondAttribute="leading" constant="20" id="dEA-uE-5xs"/>
+                            <constraint firstItem="Ayd-Mr-acp" firstAttribute="centerX" secondItem="iot-0h-Kfh" secondAttribute="centerX" id="jUO-rU-M08"/>
+                            <constraint firstItem="Tmx-Tk-xoD" firstAttribute="centerX" secondItem="iot-0h-Kfh" secondAttribute="centerX" id="vdB-PR-72G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Dc-T0-5LS"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="Q7v-Cg-QOa" id="CG3-2I-gee"/>
+                        <outlet property="titleTextField" destination="A0P-sV-Av0" id="HDf-tu-H2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUg-Nf-whf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="-80"/>
+            <point key="canvasLocation" x="1056.8" y="-80.50974512743629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KfP-a7-Gdg">
