@@ -39,6 +39,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="cOm-fm-f0Q" kind="show" id="JUi-Jh-TFU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oI-f0-xVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +109,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUg-Nf-whf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="-80.50974512743629"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="hNR-CN-Xd5">
+            <objects>
+                <viewController id="cOm-fm-f0Q" customClass="CompleteViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uwq-NW-l7X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b6-ZQ-A51">
+                                <rect key="frame" x="5" y="119" width="365" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZU-qU-R1B">
+                                <rect key="frame" x="154" y="207" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RZU-qU-R1B" firstAttribute="centerX" secondItem="uwq-NW-l7X" secondAttribute="centerX" id="067-LA-c0d"/>
+                            <constraint firstItem="9b6-ZQ-A51" firstAttribute="top" secondItem="aSN-dE-lZ3" secondAttribute="top" constant="55" id="EIJ-Jh-ifU"/>
+                            <constraint firstItem="RZU-qU-R1B" firstAttribute="top" secondItem="9b6-ZQ-A51" secondAttribute="bottom" constant="46" id="FkR-cF-2jn"/>
+                            <constraint firstItem="9b6-ZQ-A51" firstAttribute="leading" secondItem="aSN-dE-lZ3" secondAttribute="leading" constant="5" id="Xu0-QD-Ph5"/>
+                            <constraint firstItem="9b6-ZQ-A51" firstAttribute="centerX" secondItem="uwq-NW-l7X" secondAttribute="centerX" id="YTq-Ll-yKs"/>
+                            <constraint firstItem="aSN-dE-lZ3" firstAttribute="trailing" secondItem="9b6-ZQ-A51" secondAttribute="trailing" constant="5" id="fSG-Oh-vM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aSN-dE-lZ3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5m-qj-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="642"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KfP-a7-Gdg">
