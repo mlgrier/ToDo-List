@@ -23,20 +23,35 @@ class AddToDoViewController: UIViewController {
     }
 
     @IBAction func addTapped(_ sender: Any) {
-        let toDo = ToDo()
+//        let toDo = ToDo()
+//
+//        //Checking to make sure that we have text in the titleTextField - OPTIONALS!!
+//        if let titleText = titleTextField.text {
+//
+//            toDo.name = titleText
+//            toDo.important = importantSwitch.isOn
+//
+//            previousVC.toDos.append(toDo)
+//            previousVC.tableView.reloadData()
+//
+//            navigationController?.popViewController(animated: true)
+//        }
         
-        //Checking to make sure that we have text in the titleTextField - OPTIONALS!!
-        if let titleText = titleTextField.text {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        
+        let toDo = ToDoCoreData(entity: ToDoCoreData.entity(), insertInto: context)
             
-            toDo.name = titleText
-            toDo.important = importantSwitch.isOn
+            //Checking to make sure that we have text in the titleTextField - OPTIONALS!!
+                if let titleText = titleTextField.text {
+                    toDo.name = titleText
+                    toDo.important = importantSwitch.isOn
+                    
+            }
             
-            previousVC.toDos.append(toDo)
-            previousVC.tableView.reloadData()
+            try? context.save()
             
             navigationController?.popViewController(animated: true)
         }
-        
     
     }
     
