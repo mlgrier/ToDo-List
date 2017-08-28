@@ -25,7 +25,7 @@ class AddToDoViewController: UIViewController {
     @IBAction func addTapped(_ sender: Any) {
         let toDo = ToDo()
         
-        //Checking to make sure that we have text in the titleTextField - OPTIONALS!
+        //Checking to make sure that we have text in the titleTextField - OPTIONALS!!
         if let titleText = titleTextField.text {
             
             toDo.name = titleText
